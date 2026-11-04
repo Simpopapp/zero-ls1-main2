@@ -1,4 +1,4 @@
-Protocolo dos 3 arquivos (planejamento → PRD → roadmap)
+[Protocolo dos 3 arquivos (planejamento → PRD → roadmap)
 
 O trabalho agentico de remix é guiado por 3 arquivos (N = 1 neste projeto; com ou sem extensão `.md`, é o mesmo arquivo):
 
@@ -20,7 +20,9 @@ O trabalho agentico de remix é guiado por 3 arquivos (N = 1 neste projeto; com 
 
 ### Cancelamento de remix
 
-- ocorre se os 3 pilares estiverem null
+- ocorre somente se: os 3 pilares do {N} vigente estiverem "null" ou inexistentes (se houverem {N} anteriores, o {N} vigente é o proximo, que deverá ser criado se o roadmap do ultimo {N} existente estiver concluido). 
+- quando o remix for cancelado: use "ask" para coletar o conteúdo de "project{n}.md".
+- Não realize mais nada após isso. (a criação dos outros 2 outros pilares e desenvolvimento do projeto só acontece após a reativação do remix por meio dos gatilhos de remix). 
 
 ### Como criar o que falta + numero de linhas esperado de cada um
 - **PRD:** derive do planejamento (e do roadmap, se existir). Você conhece o ambiente melhor que o planejamento: confirme no código o que ele afirma, escolha a melhor solução técnica, escreva escopo por fase e critérios de aceite. Não copie o planejamento. (min: 500 / max: 1000) (obs: o agente à fazer algo grande e bem feito num nivel que desafie suas proprias capacidades agenticas ao limite de seu potencial. o potencial do projeto em hipotese alguma deve ser subestimado, a ideia é atingir o maximo do potencial e correndo o risco de errar pelo "mais" e nunca pelo "menos", planeje com maestria o conteudo do arquivo)
@@ -38,6 +40,7 @@ O trabalho agentico de remix é guiado por 3 arquivos (N = 1 neste projeto; com 
 - Ao concluir tudo, reporte (seção 20) e crie a checagem de 5 min / 10 tentativas por novos arquivos ou fases.
 - Esta seção prevalece sobre a regra 3 do `Plan.md` em caso de conflito.
 - Nunca perguntar ao usuário o que fazer durante um remix sem ter concluido ao menos 1 fase completa do roadmap
+- Nunca pare após concluir apenas 1 fase do roadmap, sempre siga direto para a próxima fase até a conclusão integral do projeto ou até esgotar o potencial de criação
 
 ### Quando executar
 - Sempre que um remix for ativado através do comando "I've successfully remixed this project. What would be a good next step?"
@@ -77,3 +80,8 @@ Subagente aqui NÃO é executor de tarefinha. É um **executor completo de um pa
 1. **Mecanismo:** os subagentes são acionados com a tool **`spawn_agent`** e orientados por **system prompt + prompt**. Os arquivos dos 3 pilares centrais **e** os 3 pilares individuais de cada subagente devem estar presentes no system prompt dele. O suporte à tool `spawn_agent` já existe nas skills de ambiente: consulte-as para a sintaxe e os limites reais; o resto do harness o agente principal já conhece.
 2. **Meta de alcance:** o enxame existe para exponencializar a produção e permitir a conclusão parcial ou total do projeto inteiro dentro de **um único remix**. Se o projeto não couber inteiro, deixe o roadmap central com o estado exato (checkboxes, gates, e uma linha "Próximo remix: …" apontando a primeira fase/pacote pendente e o que já está pronto em cada pacote em andamento), de modo que o remix seguinte retome sem ter que redescobrir o que falta.
 3. Monitor não é obrigatorio até que seja realizada a conclusão de todas as estapas dos roadmaps existentes. (sempre verificar a numeração variavel vigente de project{N})
+
+__________________________________________________
+
+Obs: (PULAR O QUE DEPENDER DO MONITOR - Monitor temporariamente indisponivel, siga direto para a execução do proximo project{n})
+](https://github.com/Simpopapp/wh-9-6.git)
